@@ -8,14 +8,14 @@ function showStatus(message) {
     statusBox.textContent = message;
     
    
-    statusBox.style.display = 'block';
+    statusBox.style.visibility = 'visible';
 
    
     setTimeout(() => {
  
-        statusBox.style.display = 'none';
+        statusBox.style.visibility = 'hidden';
         statusBox.textContent = '';
-    }, 2000);
+    }, 3000);
 }
 
 
@@ -33,7 +33,7 @@ cpy.addEventListener('click', function() {
         })
         .catch(err => {
             showStatus('Failed to copy');
-            console.error('Error:', err);
+          
         });
 });
 
@@ -45,7 +45,7 @@ paste.addEventListener('click', function() {
             showStatus('Pasted from clipboard!');
         })
         .catch(err => {
-            showStatus('Permission denied or empty');
-            console.error('Failed to read clipboard', err);
+            showStatus('Failed to paste');
+        
         });
 });
