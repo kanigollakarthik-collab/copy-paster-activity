@@ -33,7 +33,7 @@
         }
         h1 {
             position: relative;
-            bottom: 100px;
+            bottom: 50px;
             font-family: 'Poiret One', cursive;
             color: white;
             font-weight: bolder;
@@ -76,29 +76,37 @@
                 transition-duration: 0.3s;
             }
             .status-box {
-            width: 300px;
-            height: 40px;
+            width: 250px;
+            height: 150px;
             margin-top: 20px;
-            background-color: rgba(255, 255, 255, 0.25);
+            background-color: rgba(255, 255, 255, 0.25); 
             border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 8px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            
-            font-family: 'Open Sans', sans-serif;
+            position: relative;
+            font-family: 'Poiret One', cursive;
             color: white;
             font-weight: bold;
-            font-size: 14px;
-            
-           display:  none;
+            font-size: 24px;
+            bottom: 300px;
+           visibility: hidden;
         
         }
+            .fixed {
+                position: fixed;
+              top: 305px;
+              
+            }
     </style>
 </head>
 <body>
     <div class="status-box"></div>
-<div>
+ <div class="fixed">
+    <div>
+   
     <h1>Copy and paster</h1>
     <textarea name="alpha" id="beta" placeholder="Enter your copyable message here..."></textarea>
 </div>
@@ -124,7 +132,7 @@ paste
 
 
 
-
+</div>
 
 
 
@@ -133,5 +141,4 @@ paste
 
     <script src="index.js"></script>
 </body>
-
 </html>
